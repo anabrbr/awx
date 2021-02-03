@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Remove junior
+      user:
+        name: junior
+        state: absent
+        remove: yes
