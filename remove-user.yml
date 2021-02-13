@@ -4,6 +4,6 @@
   tasks:
     - name: Remove junior
       user:
-        name: junior
+        name: ana
         state: absent
         remove: yes
