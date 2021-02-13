@@ -1,0 +1,30 @@
+---
+
+- hosts: all
+
+  become: yes
+
+ 
+
+
+  tasks:
+
+  - name: install epel repo
+
+    yum: name=epel-release state=latest
+
+ 
+
+
+  - name: install zabbix-agent
+
+    yum: name=zabbix-agent state=latest
+
+ 
+
+
+  handlers:
+
+  - name: Start zabbix-agent
+
+    service: name=zabbix-agent state=started enabled=yes

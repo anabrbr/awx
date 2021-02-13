@@ -1,0 +1,6 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: remove user to group
+      command: "gpasswd -d alice developer"

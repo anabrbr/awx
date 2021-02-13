@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: muda senha usuario
+      user: 
+        name: bob
+        password: "{{ '654321' | password_hash('sha512') }}"

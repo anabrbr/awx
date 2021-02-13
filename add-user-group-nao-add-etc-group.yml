@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: add user to group
+      user:
+        name: alice
+        group: developer
+        append: yes

@@ -1,0 +1,6 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: add user to group
+      command: "gpasswd -a alice developer"
